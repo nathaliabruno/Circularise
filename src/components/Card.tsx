@@ -1,23 +1,28 @@
 import ArrowDown from "../icons/arrow-down.svg"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 interface ICard {
   children: React.ReactNode
+  opened: Function
 }
 
-export const Card = ({ children }: ICard) => {
+export const Card = ({ children, opened }: ICard) => {
   const [isOpened, setIsOpened] = useState(false)
 
   const toggleOpened = () => {
     setIsOpened((prevOpened) => !prevOpened)
   }
 
+  useEffect(() => {
+    opened(isOpened)
+  }, [isOpened, opened])
+
   return (
     <div
-      className={`rounded-sm text-black p-6 pb-8  border-2 box-border relative hover:shadow-card cursor-pointer ${
+      className={`rounded-sm text-black p-6 pb-8  border-2 box-border relative hover:shadow-card cursor-pointer transition-all duration-500 ${
         isOpened
-          ? "border-blue shadow-card bg-blue8"
+          ? "border-blue shadow-card bg-blue8 h-96"
           : "bg-gray-200 border-gray-300"
       }`}
       onClick={toggleOpened}
