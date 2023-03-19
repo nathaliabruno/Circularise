@@ -5,7 +5,7 @@ import { Text } from "./Text"
 import Member from "./Member"
 
 const MembersList = ({ login }: { login: string }) => {
-  const { data, error, isLoading } = useQuery("members", () =>
+  const { data, error, isLoading } = useQuery(["members", login], () =>
     fetchMembers(login)
   )
 
@@ -13,7 +13,7 @@ const MembersList = ({ login }: { login: string }) => {
   if (error) return <div>error</div>
 
   return (
-    <div className="columns-2">
+    <div>
       <Text tag="h3" styling="uppercase font-bold">
         Members
       </Text>

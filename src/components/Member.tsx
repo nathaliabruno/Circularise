@@ -1,7 +1,7 @@
 import { IMember } from "@/types"
 
 const Member = (props: IMember) => {
-  return <div>Member</div>
+  return <div>{props.login}</div>
 }
 
 export default Member

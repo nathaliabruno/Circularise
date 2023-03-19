@@ -12,9 +12,9 @@ const Organization = (props: IOrg) => {
   return (
     <Card opened={setIsOpened}>
       <article>
-        <header>
+        <header className="flex justify-start items-center">
           <Avatar url={avatar_url} name={login} />
-          <div>
+          <div className="pl-6">
             <Text tag="h2">{login}</Text>
             <Text>{id}</Text>
             <Text>{node_id}</Text>
