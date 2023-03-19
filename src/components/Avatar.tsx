@@ -7,7 +7,7 @@ interface IAvatar {
 
 const Avatar = ({ url, name }: IAvatar) => {
   return (
-    <div className={`rounded-full bg-gray-400 w-20 h-20`}>
+    <div className={`rounded-full bg-gray-400 w-20 h-20 overflow-hidden`}>
       {url && (
         <Image
           className="dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"

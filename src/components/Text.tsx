@@ -17,7 +17,7 @@ export const Text = ({ tag: Wrapper = "p", children, styling }: IText) => {
       break
 
     case "h3":
-      styles = "text-lg font-normal leading-normal my-2"
+      styles = "text-lg leading-normal my-2"
       break
 
     case "p":
