@@ -1,21 +1,18 @@
+import { useState } from "react"
 import { Card } from "./Card"
+import { Text } from "./Text"
+import { IOrg } from "@/types"
 
-interface IOrg {
-  login: string
-  id: number
-  node_id: string
-  url: string
-  repos_url: string
-  events_url: string
-  hooks_url: string
-  issues_url: string
-  members_url: string
-  public_members_url: string
-  avatar_url: string
-  description?: string
-}
 const Organization = (props: IOrg) => {
-  return <Card>Org</Card>
+  const [isOpened, setIsOpened] = useState(false)
+
+  return (
+    <Card opened={setIsOpened}>
+      <>
+        <Text tag="h2">Test title</Text>
+      </>
+    </Card>
+  )
 }
 
 export default Organization
