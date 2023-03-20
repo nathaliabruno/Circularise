@@ -20,7 +20,12 @@ const Organization = (props: IOrg) => {
             <Text>{node_id}</Text>
           </div>
         </header>
-        <MembersList login={login} />
+        <MembersList
+          login={login}
+          className={`overflow-hidden h-0 transition-all duration-300 ease-in-out ${
+            isOpened && "h-full"
+          }`}
+        />
       </article>
     </Card>
   )

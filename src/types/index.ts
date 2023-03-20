@@ -34,4 +34,6 @@ export interface IMember {
   site_admin: boolean
   name?: string
   email?: string
+  item?: number
+  isUnic: boolean
 }
