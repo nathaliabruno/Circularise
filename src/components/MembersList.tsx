@@ -26,15 +26,20 @@ const MembersList = ({
 
       {data.length === 0 ? (
         <Text>No Members for this organization.</Text>
-      ) : (
-        data.length === 1 && (
-          <Member isUnic={true} item={1} key={data[0].id} {...data[0]} />
-        )
-      )}
-      {data.length > 1 &&
-        data?.map((member: IMember, index: number) => (
-          <Member item={index + 1} key={member.id} {...member} isUnic={false} />
-        ))}
+      ) : data.length === 1 ? (
+        <Member isUnic={true} item={1} key={data[0].id} {...data[0]} />
+      ) : data.length > 1 ? (
+        <ul>
+          {data?.map((member: IMember, index: number) => (
+            <Member
+              item={index + 1}
+              key={member.id}
+              {...member}
+              isUnic={false}
+            />
+          ))}
+        </ul>
+      ) : null}
     </div>
   )
 }
