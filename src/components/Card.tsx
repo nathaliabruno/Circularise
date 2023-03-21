@@ -20,7 +20,7 @@ export const Card = ({ children, opened }: ICard) => {
 
   return (
     <div
-      className={`rounded-sm text-black p-6 pb-8  border-2 box-border relative hover:shadow-card cursor-pointer transition [overflow-anchor:none] mb-4 duration-200 ease-in-out break-inside-avoid ${
+      className={`rounded-sm text-black p-6 pb-8 border-2 box-border relative hover:shadow-card cursor-pointer transition [overflow-anchor:none] duration-200 ease-in-out break-inside-avoid ${
         isOpened
           ? "border-blue shadow-card bg-blue8"
           : "bg-gray-200 border-gray-300 "

@@ -5,10 +5,9 @@ import { IOrg } from "@/types"
 import Avatar from "./Avatar"
 import MembersList from "./MembersList"
 
-const Organization = (props: IOrg) => {
+const Organization = ({ avatar_url, login, id, node_id }: IOrg) => {
   const [isOpened, setIsOpened] = useState(false)
 
-  const { avatar_url, login, id, node_id } = props
   return (
     <Card opened={setIsOpened}>
       <article>
