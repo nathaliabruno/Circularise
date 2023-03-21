@@ -10,7 +10,7 @@ const OrganizationsList = () => {
   if (error) return <div>error</div>
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 auto-rows-auto gap-4">
+    <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 auto-rows-auto gap-4">
       {data &&
         data?.map((organization: IOrg) => (
           <Organization key={organization.id} {...organization} />

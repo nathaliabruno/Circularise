@@ -13,10 +13,10 @@ const Organization = ({ avatar_url, login, id, node_id }: IOrg) => {
       <article>
         <header className="flex justify-start items-center">
           <Avatar url={avatar_url} name={login} />
-          <div className="pl-6">
+          <div className="pl-3 lg:pl-6 basis-2/3 max-w-[80%]">
             <Text tag="h2">{login}</Text>
-            <Text>{id}</Text>
-            <Text>{node_id}</Text>
+            <Text styling="text-ellipsis overflow-hidden">{id}</Text>
+            <Text styling="text-ellipsis overflow-hidden">{node_id}</Text>
           </div>
         </header>
         <MembersList
