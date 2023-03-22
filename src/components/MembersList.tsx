@@ -29,7 +29,7 @@ const MembersList = ({
       ) : data.length === 1 ? (
         <Member isUnic={true} item={1} key={data[0].id} {...data[0]} />
       ) : data.length > 1 ? (
-        <ul>
+        <ul className="max-h-full">
           {data?.map((member: IMember, index: number) => (
             <Member
               item={index + 1}

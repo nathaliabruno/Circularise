@@ -21,8 +21,8 @@ const Organization = ({ avatar_url, login, id, node_id }: IOrg) => {
         </header>
         <MembersList
           login={login}
-          className={`overflow-hidden h-0 transition-all duration-300 ease-in-out ${
-            isOpened ? 'h-full' : ''
+          className={`overflow-hidden h-0 max-h-0 transition-maxHeight duration-500 ease-in-out ${
+            isOpened ? 'h-auto max-h-[10000px]' : 'transition-maxHeight'
           }`}
         />
       </article>

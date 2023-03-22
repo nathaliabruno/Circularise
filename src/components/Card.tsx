@@ -20,9 +20,9 @@ export const Card = ({ children, opened }: ICard) => {
 
   return (
     <div
-      className={`rounded-sm basis-[45%] self-start h-auto text-black p-4 lg:p-6 pb-8 border-2 box-border relative hover:shadow-card cursor-pointer transition-maxHeight duration-500 ease-in-out break-inside-avoid ${
+      className={`rounded-sm basis-[45%] self-start max-h-36 h-auto text-black p-4 lg:p-6 pb-8 border-2 box-border relative [overflow-anchor:auto] hover:shadow-card cursor-pointer transition-all duration-1000 ease-height ${
         isOpened
-          ? 'border-blue shadow-card bg-blue8 max-h-[99999px]'
+          ? 'border-blue shadow-card bg-blue8 max-h-[10000px] transition-maxHeight duration-1000 ease-height'
           : 'bg-gray-200 border-gray-300 max-h-36'
       }`}
       onClick={toggleOpened}

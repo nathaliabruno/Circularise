@@ -29,6 +29,9 @@ module.exports = {
       transitionProperty: {
         maxHeight: 'max-height',
       },
+      transitionTimingFunction: {
+        height: 'cubic-bezier(0, 1, 0, 1)',
+      },
     },
   },
   plugins: [],
