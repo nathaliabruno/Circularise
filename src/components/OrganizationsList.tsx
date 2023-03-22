@@ -10,7 +10,7 @@ const OrganizationsList = () => {
   if (error) return <div>error</div>
 
   return (
-    <div className="flex flex-wrap gap-4">
+    <div className="flex flex-wrap gap-4 justify-center">
       {data
         ? data?.map((organization: IOrg) => (
             <Organization key={organization.id} {...organization} />
