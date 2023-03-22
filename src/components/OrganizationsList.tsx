@@ -11,10 +11,11 @@ const OrganizationsList = () => {
 
   return (
     <div className="flex flex-wrap gap-4">
-      {data &&
-        data?.map((organization: IOrg) => (
-          <Organization key={organization.id} {...organization} />
-        ))}
+      {data
+        ? data?.map((organization: IOrg) => (
+            <Organization key={organization.id} {...organization} />
+          ))
+        : null}
     </div>
   )
 }
