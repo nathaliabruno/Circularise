@@ -22,7 +22,7 @@ const Organization = ({ avatar_url, login, id, node_id }: IOrg) => {
         <MembersList
           login={login}
           className={`overflow-hidden h-0 transition-all duration-300 ease-in-out ${
-            isOpened && "h-full"
+            isOpened && 'h-full'
           }`}
         />
       </article>
