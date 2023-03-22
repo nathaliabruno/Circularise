@@ -5,10 +5,11 @@ import { Text } from "./Text"
 const Member = (props: IMember) => {
   const { avatar_url, id, login, item, isUnic } = props
   return (
-    <div
+    <li
       className={`flex justify-start items-center relative ${
-        !isUnic &&
-        'before:content-[""] before:inline-block before:absolute before:w-6 before:h-full before:border-l-2 before:left-5 before:border-gray-400 first-of-type:before:h-1/2 first-of-type:before:translate-y-1/2 last-of-type:before:h-1/2 last-of-type:before:-translate-y-1/2'
+        !isUnic
+          ? 'before:content-[""] before:inline-block before:absolute before:w-6 before:h-full before:border-l-2 before:left-5 before:border-gray-400 first-of-type:before:h-1/2 first-of-type:before:translate-y-1/2 last-of-type:before:h-1/2 last-of-type:before:-translate-y-1/2'
+          : ''
       }`}
     >
       <div className={`text-base text-gray-400 relative w-10 text-center mr-2`}>
@@ -21,7 +22,7 @@ const Member = (props: IMember) => {
         </Text>
         <Text>{id}</Text>
       </div>
-    </div>
+    </li>
   )
 }
 

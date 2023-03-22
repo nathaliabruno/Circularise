@@ -5,25 +5,24 @@ import { IOrg } from "@/types"
 import Avatar from "./Avatar"
 import MembersList from "./MembersList"
 
-const Organization = (props: IOrg) => {
+const Organization = ({ avatar_url, login, id, node_id }: IOrg) => {
   const [isOpened, setIsOpened] = useState(false)
 
-  const { avatar_url, login, id, node_id } = props
   return (
     <Card opened={setIsOpened}>
       <article>
         <header className="flex justify-start items-center">
           <Avatar url={avatar_url} name={login} />
-          <div className="pl-6">
+          <div className="pl-3 lg:pl-6 basis-2/3 max-w-[80%]">
             <Text tag="h2">{login}</Text>
-            <Text>{id}</Text>
-            <Text>{node_id}</Text>
+            <Text styling="text-ellipsis overflow-hidden">{id}</Text>
+            <Text styling="text-ellipsis overflow-hidden">{node_id}</Text>
           </div>
         </header>
         <MembersList
           login={login}
-          className={`overflow-hidden h-0 transition-all duration-300 ease-in-out ${
-            isOpened && "h-full"
+          className={`overflow-hidden h-0 max-h-0 transition-maxHeight duration-500 ease-in-out ${
+            isOpened ? 'h-auto max-h-[10000px]' : 'transition-maxHeight'
           }`}
         />
       </article>
