@@ -1,4 +1,4 @@
-const API_TOKEN = process.env.GH_TOKEN
+const API_TOKEN = process.env.NEXT_PUBLIC_GH_TOKEN
 
 const fetchOrgs = async () => {
   const organizations = API_TOKEN

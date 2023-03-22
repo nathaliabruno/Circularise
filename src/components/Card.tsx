@@ -30,12 +30,12 @@ export const Card = ({ children, opened }: ICard) => {
       {children}
       <button
         className={`border-none bg-transparent absolute bottom-3 duration-500 left-1/2 -translate-x-1/2 ease-in-out ${
-          isOpened && 'rotate-180'
+          isOpened ? 'rotate-180' : ''
         }`}
       >
         <ArrowDown
           className={`fill-gray-400 group-hover:fill-gray-500 ${
-            isOpened && 'fill-gray-500'
+            isOpened ? 'fill-gray-500' : ''
           }`}
         />
       </button>
